@@ -1,0 +1,15 @@
+<div class="container mb-2">
+  <div class="row">
+    <div class="col">
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Anime</div>
+        <div class="card-body">
+          <h5 [innerHTML]="anime.animePreferido" class="card-title"></h5>
+          <p [innerHTML]="anime.personagemPreferido" class="card-text" ></p>
+            <button type="button" class="btn btn-primary float-left" [routerLink]="['/edit', anime._id]">Alterar</button>
+            <button type="button" class="btn btn-danger float-right ml-4" (click)="onDelete(anime)">Deletar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
